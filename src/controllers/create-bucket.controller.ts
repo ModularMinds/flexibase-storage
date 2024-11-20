@@ -1,9 +1,11 @@
 import { Request, Response } from "express";
+
 import path from "path";
+
 import fs from "fs";
 
 export const createBuckerController = (req: Request, res: Response) => {
-  const basePath = path.join(__dirname, "buckets");
+  const basePath = path.join(__dirname, "../../buckets");
   const { bucketName } = req.body;
 
   if (!bucketName) res.status(400).json({ message: "Bucket name is required" });

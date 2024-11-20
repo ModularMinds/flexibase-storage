@@ -6,9 +6,11 @@ import { rootRouter } from "./routes";
 config();
 
 const app = express();
-app.use(cors());
 
-app.use("/", rootRouter);
+app.use(cors());
+app.use(express.json());
+
+app.use("/api", rootRouter);
 
 app.listen(process.env.FLEXIBASE_STORAGE_EXPOSE_PORT, () => {
   console.log(
