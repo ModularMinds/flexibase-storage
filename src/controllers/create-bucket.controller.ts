@@ -3,14 +3,14 @@ import { Request, Response } from "express";
 import path from "path";
 
 import fs from "fs";
+import { bucketBasePath } from "../config/bucketConfig";
 
 export const createBuckerController = (req: Request, res: Response) => {
-  const basePath = path.join(__dirname, "../../buckets");
   const { bucketName } = req.body;
 
   if (!bucketName) res.status(400).json({ message: "Bucket name is required" });
 
-  const bucketPath = path.join(basePath, bucketName);
+  const bucketPath = path.join(bucketBasePath, bucketName);
 
   // Check if bucket already exists
   if (fs.existsSync(bucketPath))
