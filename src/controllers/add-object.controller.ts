@@ -6,12 +6,12 @@ export const addObjectController = (req: Request, res: Response) => {
 
   if (!bucketName) {
     res.status(400).json({ message: "Bucket name is required" });
-    return
+    return;
   }
 
   if (!req.file) {
     res.status(400).json({ message: "File is required" });
-    return
+    return;
   }
 
   res.status(201).json({
