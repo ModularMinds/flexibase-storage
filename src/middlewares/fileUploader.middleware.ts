@@ -1,8 +1,7 @@
 import path from "path";
 import multer from "multer";
 import fs from "fs";
-
-const bucketBasePath = path.join(__dirname, "../../buckets");
+import { bucketBasePath } from "../config";
 
 // Multer configuration for file uploads
 const storage = multer.diskStorage({

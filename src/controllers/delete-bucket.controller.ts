@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { bucketBasePath } from "../config/bucketConfig";
+import { bucketBasePath } from "../config";
 import path from "path";
 import fs from "fs";
 

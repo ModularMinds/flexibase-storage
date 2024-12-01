@@ -3,7 +3,7 @@ import { Request, Response } from "express";
 import path from "path";
 
 import fs from "fs";
-import { bucketBasePath } from "../config/bucketConfig";
+import { bucketBasePath } from "../config";
 
 export const createBuckerController = (req: Request, res: Response) => {
   const { bucketName } = req.body;
