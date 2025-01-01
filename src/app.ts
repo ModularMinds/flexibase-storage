@@ -8,7 +8,7 @@ import { config } from "dotenv";
 
 import { rootRouter } from "./routes";
 
-import { db } from "./config";
+// import { db } from "./config";
 
 config();
 
